@@ -1,0 +1,23 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    div {
+        width: 100%;
+        background-color: $color-3;
+    }
+    div:nth-child(odd) {
+        background-color: $color-1;
+    }
+}
+
+.preamble {
+    width: 100%;
+    background-color: $color-3;
+}
+
+@media (min-width: $M) {
+    .main div {
+        width: 50%;
+        align-self: flex-start;
+    }
+}
