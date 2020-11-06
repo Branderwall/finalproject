@@ -39,6 +39,17 @@ h2 {
   }
 }
 
+h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0.5em 0;
+
+  @include MQ(S) {
+    font-size: 1.5rem;
+    margin: 0.5em 0 1.4em;
+  }
+}
+
 div {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
