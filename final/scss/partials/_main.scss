@@ -8,6 +8,7 @@ $split-content-height: 40em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: relative;
   width: 100%;
   background-color: $color-2;
   [role="article"] {
