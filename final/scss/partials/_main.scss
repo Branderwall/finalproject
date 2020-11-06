@@ -2,11 +2,11 @@ $main-width: 75%;
 $sidebar-width: 100% - $main-width;
 
 $split-content-width: 50%;
-$split-content-padding: 100% - $split-content-width;
+$split-content-height: 40em;
 
 .main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   background-color: $color-2;
@@ -20,7 +20,6 @@ $split-content-padding: 100% - $split-content-width;
 }
 
 .preamble {
-  width: 100%;
   padding: 1em;
   background-color: $color-3;
 }
@@ -32,10 +31,15 @@ $split-content-padding: 100% - $split-content-width;
   .main {
     [role="article"] {
       width: $split-content-width;
-      min-height: 50em;
+      align-self: flex-start;
+      min-height: $split-content-height;
     }
     [role="article"]:nth-child(odd) {
-      margin-left: 50%;
+    align-self: flex-end;
     }
+  }
+  .preamble {
+    width: $split-content-width;
+    min-height: $split-content-height;
   }
 }
