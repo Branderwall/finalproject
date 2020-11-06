@@ -214,6 +214,8 @@ footer {
   background-color: #006666;
   padding: 15px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 footer a {
@@ -223,11 +225,6 @@ footer a {
 }
 
 @media (min-width: 1024px) {
-  footer {
-    position: absolute;
-    bottom: 0;
-  }
-
   .requirements p:last-child {
     position: absolute;
     width: 100%;
