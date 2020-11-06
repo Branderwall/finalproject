@@ -39,20 +39,26 @@ h2 {
   }
 }
 
+div {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 section > h2::before {
   /* number before each section title */
   color: darken($color-4, 15%);
+}
+
+a {
+  color: $color-1;
+  text-decoration: underline;
 }
 
 p {
   font-size: 1.4rem;
   line-height: 1.4;
   color: lighten($color-2, 25%);
-
-  a {
-    color: $color-1;
-    text-decoration: underline;
-  }
 
   @include MQ(S) {
     font-size: 1.6rem;
