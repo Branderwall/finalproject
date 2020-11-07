@@ -162,6 +162,10 @@ p {
   background-color: #34281e;
 }
 
+.intro {
+  background-color: #897689;
+}
+
 @media (min-width: 1024px) {
   .page-wrapper {
     width: 75%;

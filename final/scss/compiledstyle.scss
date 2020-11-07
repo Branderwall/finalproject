@@ -1,0 +1,284 @@
+/*  To update css, navigate to scss folder and use the following in the command line: 
+    sass style.scss ../style.css 
+*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #9b1c1f; // Red - Action color
+$color-2: #897689; // Purple
+$color-3: #34281e; // Brown
+$color-4: #006666; // Teal
+$color-5: #ffffff; // White
+
+// additional colors
+
+$success: $color-4; // Teal
+$alert: $color-1; // Red
+
+
+
+// breakpoints
+   
+$S:     768px;   
+$M:     1024px;     
+$L:     1600px;   
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+// super light grid - it works with the .cd-container class inside style.scss
+
+@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota&family=Roboto&display=swap');
+
+
+// fonts
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Bellota', cursive;
+
+
+h1,
+h2,
+h3 {
+  font-family: $secondary-font;
+  color: $color-2;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+
+  @include MQ(S) {
+    font-size: 3.2rem;
+  }
+
+  @include MQ(M) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0;
+
+  @include MQ(S) {
+    font-size: 1.8rem;
+    margin: 1em 0 1.4em;
+  }
+}
+
+h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0.5em 0;
+
+  @include MQ(S) {
+    font-size: 1.5rem;
+    margin: 0.5em 0 1.4em;
+  }
+}
+
+div {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+section > h2::before {
+  /* number before each section title */
+  color: darken($color-4, 15%);
+}
+
+a {
+  color: $color-1;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: lighten($color-2, 25%);
+
+  @include MQ(S) {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+$main-width: 75%;
+$sidebar-width: 100% - $main-width;
+
+$split-content-width: 50%;
+$split-content-height: 40em;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  background-color: $color-2;
+  [role="article"] {
+    padding: 1em;
+    background-color: $color-3;
+  }
+  [role="article"]:nth-child(odd) {
+    background-color: $color-1;
+  }
+}
+
+.preamble {
+  padding: 1em;
+  background-color: $color-3;
+}
+
+.intro {
+    background-color: $color-2;
+}
+
+@media (min-width: $M) {
+  .page-wrapper {
+    width: $main-width;
+  }
+  .main {
+    [role="article"] {
+      width: $split-content-width;
+      align-self: flex-start;
+      min-height: $split-content-height;
+    }
+    [role="article"]:nth-child(odd) {
+    align-self: flex-end;
+    }
+  }
+  .preamble {
+    width: $split-content-width;
+    min-height: $split-content-height;
+  }
+}
+
+
+.sidebar {
+    height: 100%;
+    background-color: #111;
+    padding: 1%;
+}
+
+
+@media (min-width: $M) {
+.sidebar {
+    height: 100%;
+    width: $sidebar-width;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    }
+}
+
+header, .summary {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    background-color: $color-4;
+}
+
+
+.requirements p:last-child {
+    background-color: $color-4;
+    margin: 10px -16px -16px -16px;
+    padding: 15px;
+ }
+ footer {
+    background-color: $color-4;
+    padding: 15px;
+    width: 100%;   
+    position: absolute;
+    bottom: 0;
+ }
+ footer a {
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold; 
+ }
+
+ @media (min-width: $M) {
+    .requirements p:last-child {
+        position: absolute;
+        width: 100%;
+    }
+ }

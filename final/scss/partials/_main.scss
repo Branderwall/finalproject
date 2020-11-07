@@ -25,6 +25,10 @@ $split-content-height: 40em;
   background-color: $color-3;
 }
 
+.intro {
+    background-color: $color-2;
+}
+
 @media (min-width: $M) {
   .page-wrapper {
     width: $main-width;
