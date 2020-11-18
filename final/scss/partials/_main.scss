@@ -4,6 +4,8 @@ $sidebar-width: 100% - $main-width;
 $split-content-width: 50%;
 $split-content-height: 40em;
 
+$article-opacity: 75%; 
+
 .main {
   display: flex;
   flex-direction: column;
@@ -11,22 +13,34 @@ $split-content-height: 40em;
   position: relative;
   width: 100%;
   background-color: $color-2;
+  background-image: url(assets/sdjkfkfdsafjks.svg);
+  background-size: cover;
   [role="article"] {
     padding: 1em;
     background-color: $color-3;
+    opacity:$article-opacity;
+    background-image: url(assets/testsvg.svg);
+    background-size: cover;
+
   }
   [role="article"]:nth-child(odd) {
     background-color: $color-1;
+    opacity:$article-opacity;
+    background-image: url(assets/jfsasosne.svg);
+    background-size: contain;
   }
 }
 
 .preamble {
   padding: 1em;
   background-color: $color-3;
+  opacity:$article-opacity;
 }
 
 .intro {
     background-color: $color-2;
+    background-image: url(assets/testsvg.svg);
+  background-size: cover;
 }
 
 @media (min-width: $M) {

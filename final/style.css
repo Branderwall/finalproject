@@ -148,22 +148,33 @@ p {
   position: relative;
   width: 100%;
   background-color: #897689;
+  background-image: url(assets/sdjkfkfdsafjks.svg);
+  background-size: cover;
 }
 .main [role=article] {
   padding: 1em;
   background-color: #34281e;
+  opacity: 75%;
+  background-image: url(assets/testsvg.svg);
+  background-size: cover;
 }
 .main [role=article]:nth-child(odd) {
   background-color: #9b1c1f;
+  opacity: 75%;
+  background-image: url(assets/jfsasosne.svg);
+  background-size: contain;
 }
 
 .preamble {
   padding: 1em;
   background-color: #34281e;
+  opacity: 75%;
 }
 
 .intro {
   background-color: #897689;
+  background-image: url(assets/testsvg.svg);
+  background-size: cover;
 }
 
 @media (min-width: 1024px) {
