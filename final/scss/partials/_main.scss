@@ -4,7 +4,13 @@ $sidebar-width: 100% - $main-width;
 $split-content-width: 50%;
 $split-content-height: 40em;
 
-$article-opacity: 75%; 
+$article-opacity: 90%; 
+
+
+.page-wrapper {
+  background-image: url(assets/image2vector.svg);
+  background-color: $color-2;
+}
 
 .main {
   display: flex;
@@ -12,21 +18,20 @@ $article-opacity: 75%;
   flex-wrap: wrap;
   position: relative;
   width: 100%;
-  background-color: $color-2;
-  background-image: url(assets/sdjkfkfdsafjks.svg);
+  background-color: transparent;
   background-size: cover;
   [role="article"] {
     padding: 1em;
     background-color: $color-3;
     opacity:$article-opacity;
-    background-image: url(assets/testsvg.svg);
+    // background-image: url(assets/testsvg.svg);
     background-size: cover;
 
   }
   [role="article"]:nth-child(odd) {
     background-color: $color-1;
     opacity:$article-opacity;
-    background-image: url(assets/jfsasosne.svg);
+    // background-image: url(assets/jfsasosne.svg);
     background-size: contain;
   }
 }
@@ -38,8 +43,8 @@ $article-opacity: 75%;
 }
 
 .intro {
-    background-color: $color-2;
-    background-image: url(assets/testsvg.svg);
+    // background-color: $color-2;
+    // background-image: url(assets/testsvg.svg);
   background-size: cover;
 }
 
