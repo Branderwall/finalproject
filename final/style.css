@@ -126,7 +126,7 @@ section > h2::before {
 
 a {
   color: #9b1c1f;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 p {
@@ -160,6 +160,7 @@ p {
   background-color: #1d6b8d;
   opacity: 90%;
   background-size: cover;
+  margin-bottom: 10em;
 }
 .main [role=article]:nth-child(odd) {
   background-color: #9b1c1f;
@@ -171,6 +172,7 @@ p {
   padding: 1em;
   background-color: #1d6b8d;
   opacity: 90%;
+  margin-bottom: 10em;
 }
 
 .intro {
@@ -186,6 +188,7 @@ p {
     width: 50%;
     align-self: flex-start;
     min-height: 40em;
+    margin-bottom: 0;
   }
   .main [role=article]:nth-child(odd) {
     align-self: flex-end;
@@ -194,6 +197,7 @@ p {
   .preamble {
     width: 50%;
     min-height: 40em;
+    margin-bottom: 0;
   }
 }
 .sidebar {
@@ -226,17 +230,24 @@ header, .summary {
 }
 
 footer {
+  display: flex;
+  justify-content: space-evenly;
   background-color: #049468;
-  padding: 15px;
   width: 100%;
   position: absolute;
   bottom: 0;
 }
-
 footer a {
-  padding: 5px;
+  padding: 1em;
   text-decoration: none;
   font-weight: bold;
+  width: 100%;
+  height: 100%;
+  color: #eeeed8;
+  text-align: center;
+}
+footer a:hover {
+  background-color: #036245;
 }
 
 @media (min-width: 1024px) {

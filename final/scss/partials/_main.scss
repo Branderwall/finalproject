@@ -5,6 +5,7 @@ $split-content-width: 50%;
 $split-content-height: 40em;
 
 $article-opacity: 90%; 
+$article-gap: 10em;
 
 
 .page-wrapper {
@@ -24,14 +25,13 @@ $article-opacity: 90%;
     padding: 1em;
     background-color: $color-3;
     opacity:$article-opacity;
-    // background-image: url(assets/testsvg.svg);
     background-size: cover;
+    margin-bottom: $article-gap;
 
   }
   [role="article"]:nth-child(odd) {
     background-color: $color-1;
     opacity:$article-opacity;
-    // background-image: url(assets/jfsasosne.svg);
     background-size: contain;
   }
 }
@@ -40,11 +40,10 @@ $article-opacity: 90%;
   padding: 1em;
   background-color: $color-3;
   opacity:$article-opacity;
+  margin-bottom: $article-gap;
 }
 
 .intro {
-    // background-color: $color-2;
-    // background-image: url(assets/testsvg.svg);
   background-size: cover;
 }
 
@@ -57,6 +56,7 @@ $article-opacity: 90%;
       width: $split-content-width;
       align-self: flex-start;
       min-height: $split-content-height;
+      margin-bottom: 0;
     }
     [role="article"]:nth-child(odd) {
     align-self: flex-end;
@@ -65,5 +65,6 @@ $article-opacity: 90%;
   .preamble {
     width: $split-content-width;
     min-height: $split-content-height;
+    margin-bottom:0;
   }
 }
