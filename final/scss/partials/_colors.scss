@@ -3,16 +3,22 @@
 // color palette - these colors will be the color swatches of the Colors section
 
 $color-1: #9b1c1f; // Red - Action color
-$color-2: #eeeed8; // Purple
+$color-2: #eeeed8; // Beige
 $color-3: #1d6b8d; // Brown
-$color-4: #049468; // Teal
+$color-4: #049468; // Green
 $color-5: #ffffff; // White
-$color-6: rgb(188,188,132); //tan
+$color-6: #bcbc84; //tan
 
 // additional colors
 
-$success: $color-4; // Teal
+$success: $color-4; // Green
 $alert: $color-1; // Red
 
-
 // $color-7: #006666; // Teal
+
+$trans-opacity: E6; // ~90%
+
+$color-1-trans: $color-1 + $trans-opacity;
+$color-3-trans: $color-3 + $trans-opacity;
+$color-4-trans: $color-4 + $trans-opacity;
+$color-6-trans: $color-6 + $trans-opacity;

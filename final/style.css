@@ -141,9 +141,10 @@ p {
   }
 }
 
-.page-wrapper {
+#css-zen-garden {
   background-image: url(assets/image2vector.svg);
   background-color: #eeeed8;
+  background-attachment: fixed;
 }
 
 .main {
@@ -157,26 +158,22 @@ p {
 }
 .main [role=article] {
   padding: 1em;
-  background-color: #1d6b8d;
-  opacity: 90%;
-  background-size: cover;
-  margin-bottom: 10em;
+  background-color: #1d6b8dE6;
+  opacity: 100%;
+  min-height: 30em;
+  margin-bottom: 7em;
 }
 .main [role=article]:nth-child(odd) {
-  background-color: #9b1c1f;
-  opacity: 90%;
-  background-size: contain;
+  background-color: #9b1c1fE6;
+  opacity: 100%;
 }
 
 .preamble {
   padding: 1em;
-  background-color: #1d6b8d;
-  opacity: 90%;
-  margin-bottom: 10em;
-}
-
-.intro {
-  background-size: cover;
+  background-color: #1d6b8dE6;
+  opacity: 100%;
+  margin-bottom: 7em;
+  min-height: 30em;
 }
 
 @media (min-width: 1024px) {

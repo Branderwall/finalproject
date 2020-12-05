@@ -3,14 +3,16 @@ $sidebar-width: 100% - $main-width;
 
 $split-content-width: 50%;
 $split-content-height: 40em;
+$mobile-content-height: 30em;
 
-$article-opacity: 90%; 
-$article-gap: 10em;
+$article-opacity: 100%; 
+$article-gap: 7em;
 
 
-.page-wrapper {
+#css-zen-garden {
   background-image: url(assets/image2vector.svg);
   background-color: $color-2;
+  background-attachment: fixed;
 }
 
 .main {
@@ -23,29 +25,31 @@ $article-gap: 10em;
   background-size: cover;
   [role="article"] {
     padding: 1em;
-    background-color: $color-3;
+    background-color: $color-3-trans;
     opacity:$article-opacity;
-    background-size: cover;
+    min-height: $mobile-content-height;
+    // background-size: cover;
     margin-bottom: $article-gap;
 
   }
   [role="article"]:nth-child(odd) {
-    background-color: $color-1;
+    background-color: $color-1-trans;
     opacity:$article-opacity;
-    background-size: contain;
+    // background-size: contain;
   }
 }
 
 .preamble {
   padding: 1em;
-  background-color: $color-3;
+  background-color: $color-3-trans;
   opacity:$article-opacity;
   margin-bottom: $article-gap;
+  min-height: $mobile-content-height;
 }
 
-.intro {
-  background-size: cover;
-}
+// .intro {
+//   background-size: cover;
+// }
 
 @media (min-width: $M) {
   .page-wrapper {
