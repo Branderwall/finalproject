@@ -135,6 +135,7 @@ p {
   font-size: 1.4rem;
   line-height: 1.4;
   color: white;
+  margin-bottom: 1rem;
 }
 @media only screen and (min-width: 768px) {
   p {
@@ -179,8 +180,8 @@ p {
   transition: all 1s;
 }
 
-.requirements {
-  margin-bottom: 0;
+#zen-requirements {
+  margin-bottom: 2.9rem;
 }
 
 .main [role=article]:hover, .preamble:hover {
