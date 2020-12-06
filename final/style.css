@@ -141,6 +141,16 @@ p {
   }
 }
 
+@keyframes stitch {
+  from {
+    border-left: 1rem hidden pink;
+    border-top: 1rem hidden pink;
+  }
+  to {
+    border-left: 1rem dashed pink;
+    border-top: 1rem dashed pink;
+  }
+}
 #css-zen-garden {
   background-image: url(assets/image2vector.svg);
   background-color: #eeeed8;
@@ -156,24 +166,29 @@ p {
   background-color: transparent;
   background-size: cover;
 }
-.main [role=article] {
+
+.main [role=article], .preamble {
   padding: 1em;
   background-color: #1d6b8dE6;
   opacity: 100%;
   min-height: 30em;
   margin-bottom: 7em;
+  box-shadow: none;
+  transition: all 1s;
 }
+
+.requirements {
+  margin-bottom: 0;
+}
+
+.main [role=article]:hover, .preamble:hover {
+  box-shadow: 0em 2em 3em -1em #000000E6;
+  transform: translateY(-1em);
+}
+
 .main [role=article]:nth-child(odd) {
   background-color: #9b1c1fE6;
   opacity: 100%;
-}
-
-.preamble {
-  padding: 1em;
-  background-color: #1d6b8dE6;
-  opacity: 100%;
-  margin-bottom: 7em;
-  min-height: 30em;
 }
 
 @media (min-width: 1024px) {
@@ -212,6 +227,8 @@ p {
     top: 0;
     right: 0;
     overflow-x: hidden;
+    border-left: 1rem dashed pink;
+    border-top: 1rem dashed pink;
   }
 }
 header, .summary {
@@ -242,6 +259,7 @@ footer a {
   height: 100%;
   color: #eeeed8;
   text-align: center;
+  transition: background-color 1s;
 }
 footer a:hover {
   background-color: #036245;

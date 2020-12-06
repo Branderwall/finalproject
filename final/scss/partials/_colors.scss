@@ -8,17 +8,22 @@ $color-3: #1d6b8d; // Brown
 $color-4: #049468; // Green
 $color-5: #ffffff; // White
 $color-6: #bcbc84; //tan
+$color-black: #000000; //black
 
 // additional colors
 
 $success: $color-4; // Green
 $alert: $color-1; // Red
+$thread-color: pink;
 
 // $color-7: #006666; // Teal
 
 $trans-opacity: E6; // ~90%
 
 $color-1-trans: $color-1 + $trans-opacity;
+$color-2-trans: $color-2 + $trans-opacity;
 $color-3-trans: $color-3 + $trans-opacity;
 $color-4-trans: $color-4 + $trans-opacity;
+$color-5-trans: $color-5 + $trans-opacity;
 $color-6-trans: $color-6 + $trans-opacity;
+$color-black-trans: $color-black + $trans-opacity;

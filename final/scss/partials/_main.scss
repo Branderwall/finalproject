@@ -23,33 +23,31 @@ $article-gap: 7em;
   width: 100%;
   background-color: transparent;
   background-size: cover;
-  [role="article"] {
-    padding: 1em;
-    background-color: $color-3-trans;
-    opacity:$article-opacity;
-    min-height: $mobile-content-height;
-    // background-size: cover;
-    margin-bottom: $article-gap;
-
-  }
-  [role="article"]:nth-child(odd) {
-    background-color: $color-1-trans;
-    opacity:$article-opacity;
-    // background-size: contain;
-  }
 }
 
-.preamble {
+.main [role="article"], .preamble {
   padding: 1em;
   background-color: $color-3-trans;
   opacity:$article-opacity;
-  margin-bottom: $article-gap;
   min-height: $mobile-content-height;
+  margin-bottom: $article-gap;
+  box-shadow: none;
+  transition: all 1s;
 }
 
-// .intro {
-//   background-size: cover;
-// }
+.requirements {
+  margin-bottom: 0;
+}
+
+.main [role="article"]:hover, .preamble:hover {
+  box-shadow: 0em 2em 3em -1em $color-black-trans;
+  transform: translateY(-1em);
+}
+
+.main [role="article"]:nth-child(odd) {
+  background-color: $color-1-trans;
+  opacity:$article-opacity;
+}
 
 @media (min-width: $M) {
   .page-wrapper {
