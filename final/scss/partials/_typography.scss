@@ -70,6 +70,7 @@ p {
   font-size: 1.4rem;
   line-height: 1.4;
   color: lighten($color-2, 25%);
+  margin-bottom: 1rem;
 
   @include MQ(S) {
     font-size: 1.6rem;
