@@ -3,3 +3,12 @@ header, .summary {
     padding-bottom: 10px;
     background-color: $color-4;
 }
+
+header h1 {
+    padding-top: 20px;
+    margin-bottom: -10px;
+}
+
+.summary {
+    padding-bottom: 20px;
+}

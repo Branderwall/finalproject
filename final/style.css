@@ -66,12 +66,16 @@ h1,
 h2,
 h3 {
   font-family: "Bellota", cursive;
-  color: #eeeed8;
+}
+
+h1,
+h2 {
+  color: #9b1c1f;
 }
 
 h1 {
   font-size: 2.4rem;
-  font-weight: 300;
+  font-weight: bold;
   line-height: 1.2;
   margin: 0 0 0.4em;
 }
@@ -88,24 +92,22 @@ h1 {
 
 h2 {
   font-weight: bold;
-  text-transform: uppercase;
   margin: 1em 0;
 }
 @media only screen and (min-width: 768px) {
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin: 1em 0 1.4em;
   }
 }
 
 h3 {
-  font-weight: bold;
-  text-transform: uppercase;
   margin: 0.5em 0;
+  color: #eeeed8;
 }
 @media only screen and (min-width: 768px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 0.5em 0 1.4em;
   }
 }
@@ -218,6 +220,15 @@ header, .summary {
   padding-left: 20px;
   padding-bottom: 10px;
   background-color: #049468;
+}
+
+header h1 {
+  padding-top: 20px;
+  margin-bottom: -10px;
+}
+
+.summary {
+  padding-bottom: 20px;
 }
 
 .requirements p:last-child {
