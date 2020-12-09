@@ -155,7 +155,8 @@ p {
   background-size: 2000px;
 }
 
-.main [role=article], .preamble {
+.main [role=article],
+.preamble {
   padding: 1rem;
   background-color: #3e5079E6;
   opacity: 100%;
@@ -166,7 +167,8 @@ p {
   border: 5px dashed #bcbc84;
 }
 
-.main [role=article]:hover, .preamble:hover {
+.main [role=article]:hover,
+.preamble:hover {
   box-shadow: 0rem 2rem 3rem -1rem #000000E6;
   margin-top: -1rem;
   margin-bottom: 8rem;
@@ -182,8 +184,10 @@ p {
     width: 75%;
   }
 
-  .main [role=article], .preamble {
-    width: 50%;
+  .main [role=article],
+.preamble {
+    max-width: 50%;
+    min-width: 40rem;
     align-self: flex-start;
     min-height: 40rem;
     margin-bottom: 0;
@@ -193,7 +197,8 @@ p {
     align-self: flex-end;
   }
 
-  .main [role=article]:hover, .preamble:hover {
+  .main [role=article]:hover,
+.preamble:hover {
     margin-bottom: 1rem;
   }
 }

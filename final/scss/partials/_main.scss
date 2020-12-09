@@ -1,13 +1,13 @@
 $main-width: 75%;
 $sidebar-width: 100% - $main-width;
 
-$split-content-width: 50%;
+$split-content-max-width: 50%;
+$split-content-min-width: 40rem;
 $split-content-height: 40rem;
 $mobile-content-height: 30rem;
 
-$article-opacity: 100%; 
+$article-opacity: 100%;
 $article-gap: 7rem;
-
 
 #css-zen-garden {
   background-image: url(assets/image2vector.svg);
@@ -25,10 +25,11 @@ $article-gap: 7rem;
   background-size: 2000px;
 }
 
-.main [role="article"], .preamble {
+.main [role="article"],
+.preamble {
   padding: 1rem;
   background-color: $color-3-trans;
-  opacity:$article-opacity;
+  opacity: $article-opacity;
   min-height: $mobile-content-height;
   margin-bottom: $article-gap;
   box-shadow: none;
@@ -36,8 +37,8 @@ $article-gap: 7rem;
   border: 5px dashed $thread-color;
 }
 
-
-.main [role="article"]:hover, .preamble:hover {
+.main [role="article"]:hover,
+.preamble:hover {
   box-shadow: 0rem 2rem 3rem -1rem $color-black-trans;
   margin-top: -1rem;
   margin-bottom: $article-gap + 1rem;
@@ -45,25 +46,28 @@ $article-gap: 7rem;
 
 .main [role="article"]:nth-child(odd) {
   background-color: $color-1-trans;
-  opacity:$article-opacity;
+  opacity: $article-opacity;
 }
 
 @media (min-width: $M) {
   .page-wrapper {
     width: $main-width;
   }
-  .main [role="article"], .preamble {
-      width: $split-content-width;
-      align-self: flex-start;
-      min-height: $split-content-height;
-      margin-bottom: 0;
-    }
-    
-    .main [role="article"]:nth-child(odd) {
+  .main [role="article"],
+  .preamble {
+    max-width: $split-content-max-width;
+    min-width: $split-content-min-width;
+    align-self: flex-start;
+    min-height: $split-content-height;
+    margin-bottom: 0;
+  }
+
+  .main [role="article"]:nth-child(odd) {
     align-self: flex-end;
-    }
-  
-    .main [role="article"]:hover, .preamble:hover {
-      margin-bottom: 1rem;
-    }
+  }
+
+  .main [role="article"]:hover,
+  .preamble:hover {
+    margin-bottom: 1rem;
+  }
 }
