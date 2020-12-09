@@ -1,37 +1,45 @@
+#zen-requirements {
+  margin-bottom: 10rem;
+}
+
 .requirements p:last-child {
-    background-color: $color-4;
-    margin: 10px -16px -16px -16px;
-    padding: 15px;
- }
- footer {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: $color-1;
-    width: 100%;   
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 10px -16px 40px -21px;
+  padding: 15px;
+  background-color: lighten($color-1, 5%);
+  text-align: center;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $color-1;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 
-    a {
-      padding: 1em;
-      text-decoration: none;
-      font-weight: bold; 
-      width: 100%;
-      height: 100%;
-      color: $color-2;
-      text-align: center;
-      transition: background-color 1s;
-   }
+  a {
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    color: $color-2;
+    text-align: center;
+    transition: background-color 1s;
+  }
 
-   a:hover {
-      background-color: darken($color-1, 10%);
-   }
- }
-  
+  a:hover {
+    background-color: darken($color-1, 10%);
+  }
+}
 
- @media (min-width: $M) {
-    .requirements p:last-child {
-        position: absolute;
-        width: 100%;
-    }
- }
-
+//  @media (min-width: $M) {
+//     .requirements p:last-child {
+//         position: absolute;
+//         bottom: 0;
+//         margin: 10px -16px 30px -21px;
+//         width: 100%;
+//     }
+//  }

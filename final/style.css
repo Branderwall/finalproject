@@ -66,11 +66,8 @@ h1,
 h2,
 h3 {
   font-family: "Bellota", cursive;
-}
-
-h1,
-h2 {
-  color: pink;
+  font-weight: bold;
+  color: #ffc0cb;
 }
 
 h1 {
@@ -79,11 +76,6 @@ h1 {
   line-height: 1.2;
   margin: 0 0 0.4em;
 }
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 3.2rem;
-  }
-}
 @media only screen and (min-width: 1024px) {
   h1 {
     font-size: 4rem;
@@ -91,22 +83,21 @@ h1 {
 }
 
 h2 {
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 1em 0;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   h2 {
-    font-size: 1.5rem;
     margin: 1em 0 1.4em;
   }
 }
 
 h3 {
   margin: 0.5em 0;
-  color: pink;
   font-size: 1.7rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   h3 {
     font-size: 1.7rem;
     margin: 0.5em 0 1.4em;
@@ -122,13 +113,8 @@ div {
   /* Opera/IE 8+ */
 }
 
-section > h2::before {
-  /* number before each section title */
-  color: #823737;
-}
-
 a {
-  color: pink;
+  color: #ffc0cb;
   text-decoration: none;
 }
 
@@ -138,23 +124,13 @@ p {
   color: #eeeed8;
   margin-bottom: 1rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   p {
     font-size: 1.6rem;
     line-height: 1.6;
   }
 }
 
-@keyframes stitch {
-  from {
-    border-left: 1rem hidden #bcbc84;
-    border-top: 1rem hidden #bcbc84;
-  }
-  to {
-    border-left: 1rem dashed #bcbc84;
-    border-top: 1rem dashed #bcbc84;
-  }
-}
 @keyframes sew {
   from {
     stroke-dashoffset: 1000;
@@ -175,27 +151,25 @@ p {
   position: relative;
   width: 100%;
   background-color: transparent;
-  background-size: cover;
+  background-image: url(assets/quilt-sew.svg);
+  background-size: 2000px;
 }
 
 .main [role=article], .preamble {
-  padding: 1em;
+  padding: 1rem;
   background-color: #3e5079E6;
   opacity: 100%;
-  min-height: 30em;
-  margin-bottom: 7em;
+  min-height: 30rem;
+  margin-bottom: 7rem;
   box-shadow: none;
   transition: all 1s;
   border: 5px dashed #bcbc84;
 }
 
-#zen-requirements {
-  margin-bottom: 2.9rem;
-}
-
 .main [role=article]:hover, .preamble:hover {
-  box-shadow: 0em 2em 3em -1em #000000E6;
-  transform: translateY(-1em);
+  box-shadow: 0rem 2rem 3rem -1rem #000000E6;
+  margin-top: -1rem;
+  margin-bottom: 8rem;
 }
 
 .main [role=article]:nth-child(odd) {
@@ -211,18 +185,24 @@ p {
   .main [role=article], .preamble {
     width: 50%;
     align-self: flex-start;
-    min-height: 40em;
+    min-height: 40rem;
     margin-bottom: 0;
   }
 
   .main [role=article]:nth-child(odd) {
     align-self: flex-end;
   }
+
+  .main [role=article]:hover, .preamble:hover {
+    margin-bottom: 1rem;
+  }
 }
 .sidebar {
   height: 100%;
   background-color: #3e5079;
   padding: 1%;
+  background-image: url(assets/quilt-sew.svg);
+  background-size: 2000px;
 }
 
 @media (min-width: 1024px) {
@@ -249,6 +229,11 @@ header h1 {
   margin-bottom: -10px;
 }
 
+.intro {
+  background-image: url(assets/quilt-sew.svg);
+  background-size: 2000px;
+}
+
 .summary {
   padding-bottom: 20px;
 }
@@ -257,10 +242,18 @@ header {
   background-image: url(assets/quilt-sew.svg);
 }
 
+#zen-requirements {
+  margin-bottom: 10rem;
+}
+
 .requirements p:last-child {
-  background-color: #b55151;
-  margin: 10px -16px -16px -16px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 10px -16px 40px -21px;
   padding: 15px;
+  background-color: #bd6363;
+  text-align: center;
 }
 
 footer {
@@ -283,13 +276,6 @@ footer a {
 }
 footer a:hover {
   background-color: #943f3f;
-}
-
-@media (min-width: 1024px) {
-  .requirements p:last-child {
-    position: absolute;
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

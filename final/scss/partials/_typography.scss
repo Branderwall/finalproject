@@ -10,11 +10,8 @@ h1,
 h2,
 h3 {
   font-family: $secondary-font;
-}
-
-h1,
-h2 {
-  color: $link-color;
+  font-weight: bold;
+  color: $headline-color;
 }
 
 h1 {
@@ -23,31 +20,27 @@ h1 {
   line-height: 1.2;
   margin: 0 0 0.4em;
 
-  @include MQ(S) {
-    font-size: 3.2rem;
-  }
-
   @include MQ(M) {
     font-size: 4rem;
   }
 }
 
 h2 {
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 1em 0;
 
-  @include MQ(S) {
-    font-size: 1.5rem;
+  @include MQ(M) {
+    
     margin: 1em 0 1.4em;
   }
 }
 
 h3 {
   margin: 0.5em 0;
-  color: $link-color;
   font-size: 1.7rem;
 
-  @include MQ(S) {
+  @include MQ(M) {
     font-size: 1.7rem;
     margin: 0.5em 0 1.4em;
   }
@@ -57,11 +50,6 @@ div {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 box-sizing: border-box;         /* Opera/IE 8+ */
-}
-
-section > h2::before {
-  /* number before each section title */
-  color: darken($color-4, 15%);
 }
 
 a {
@@ -75,7 +63,7 @@ p {
   color: $color-2;
   margin-bottom: 1rem;
 
-  @include MQ(S) {
+  @include MQ(M) {
     font-size: 1.6rem;
     line-height: 1.6;
   }

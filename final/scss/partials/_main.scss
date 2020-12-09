@@ -2,17 +2,16 @@ $main-width: 75%;
 $sidebar-width: 100% - $main-width;
 
 $split-content-width: 50%;
-$split-content-height: 40em;
-$mobile-content-height: 30em;
+$split-content-height: 40rem;
+$mobile-content-height: 30rem;
 
 $article-opacity: 100%; 
-$article-gap: 7em;
+$article-gap: 7rem;
 
 
 #css-zen-garden {
   background-image: url(assets/image2vector.svg);
   background-color: $color-2;
-  // background-attachment: fixed;
 }
 
 .main {
@@ -22,27 +21,26 @@ $article-gap: 7em;
   position: relative;
   width: 100%;
   background-color: transparent;
-  background-size: cover;
+  background-image: url(assets/quilt-sew.svg);
+  background-size: 2000px;
 }
 
 .main [role="article"], .preamble {
-  padding: 1em;
+  padding: 1rem;
   background-color: $color-3-trans;
   opacity:$article-opacity;
   min-height: $mobile-content-height;
   margin-bottom: $article-gap;
   box-shadow: none;
   transition: all 1s;
-  border: 5px dashed $color-6;
+  border: 5px dashed $thread-color;
 }
 
-#zen-requirements {
-  margin-bottom: 2.9rem;
-}
 
 .main [role="article"]:hover, .preamble:hover {
-  box-shadow: 0em 2em 3em -1em $color-black-trans;
-  transform: translateY(-1em);
+  box-shadow: 0rem 2rem 3rem -1rem $color-black-trans;
+  margin-top: -1rem;
+  margin-bottom: $article-gap + 1rem;
 }
 
 .main [role="article"]:nth-child(odd) {
@@ -65,4 +63,7 @@ $article-gap: 7em;
     align-self: flex-end;
     }
   
+    .main [role="article"]:hover, .preamble:hover {
+      margin-bottom: 1rem;
+    }
 }

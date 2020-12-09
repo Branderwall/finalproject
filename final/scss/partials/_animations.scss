@@ -1,14 +1,3 @@
-@keyframes stitch {
-    from {
-        border-left: 1rem hidden $thread-color;
-        border-top: 1rem hidden $thread-color;
-    }
-    to {
-        border-left: 1rem dashed $thread-color;
-        border-top: 1rem dashed $thread-color; 
-    }
-}
-
 @keyframes sew {
     from {
         stroke-dashoffset: 1000;

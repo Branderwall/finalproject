@@ -2,13 +2,16 @@ header, .summary {
     padding-left: 20px;
     padding-bottom: 10px;
     background-color: $color-1;
-    // animation: sew 5s linear alternate infinite;
-
 }
 
 header h1 {
     padding-top: 20px;
     margin-bottom: -10px;
+}
+
+.intro {
+    background-image: url(assets/quilt-sew.svg);
+    background-size: 2000px;
 }
 
 .summary {
