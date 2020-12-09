@@ -12,7 +12,7 @@ $article-gap: 7em;
 #css-zen-garden {
   background-image: url(assets/image2vector.svg);
   background-color: $color-2;
-  background-attachment: fixed;
+  // background-attachment: fixed;
 }
 
 .main {
@@ -33,6 +33,7 @@ $article-gap: 7em;
   margin-bottom: $article-gap;
   box-shadow: none;
   transition: all 1s;
+  border: 5px dashed $color-6;
 }
 
 #zen-requirements {
@@ -53,20 +54,15 @@ $article-gap: 7em;
   .page-wrapper {
     width: $main-width;
   }
-  .main {
-    [role="article"] {
+  .main [role="article"], .preamble {
       width: $split-content-width;
       align-self: flex-start;
       min-height: $split-content-height;
       margin-bottom: 0;
     }
-    [role="article"]:nth-child(odd) {
+    
+    .main [role="article"]:nth-child(odd) {
     align-self: flex-end;
     }
-  }
-  .preamble {
-    width: $split-content-width;
-    min-height: $split-content-height;
-    margin-bottom:0;
-  }
+  
 }

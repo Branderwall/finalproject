@@ -70,7 +70,7 @@ h3 {
 
 h1,
 h2 {
-  color: #9b1c1f;
+  color: pink;
 }
 
 h1 {
@@ -103,7 +103,8 @@ h2 {
 
 h3 {
   margin: 0.5em 0;
-  color: #ffffff;
+  color: pink;
+  font-size: 1.7rem;
 }
 @media only screen and (min-width: 768px) {
   h3 {
@@ -123,18 +124,18 @@ div {
 
 section > h2::before {
   /* number before each section title */
-  color: #024a34;
+  color: #823737;
 }
 
 a {
-  color: #9b1c1f;
+  color: pink;
   text-decoration: none;
 }
 
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  color: white;
+  color: #eeeed8;
   margin-bottom: 1rem;
 }
 @media only screen and (min-width: 768px) {
@@ -146,18 +147,25 @@ p {
 
 @keyframes stitch {
   from {
-    border-left: 1rem hidden pink;
-    border-top: 1rem hidden pink;
+    border-left: 1rem hidden #bcbc84;
+    border-top: 1rem hidden #bcbc84;
   }
   to {
-    border-left: 1rem dashed pink;
-    border-top: 1rem dashed pink;
+    border-left: 1rem dashed #bcbc84;
+    border-top: 1rem dashed #bcbc84;
+  }
+}
+@keyframes sew {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }
 #css-zen-garden {
   background-image: url(assets/image2vector.svg);
   background-color: #eeeed8;
-  background-attachment: fixed;
 }
 
 .main {
@@ -172,12 +180,13 @@ p {
 
 .main [role=article], .preamble {
   padding: 1em;
-  background-color: #1d6b8dE6;
+  background-color: #3e5079E6;
   opacity: 100%;
   min-height: 30em;
   margin-bottom: 7em;
   box-shadow: none;
   transition: all 1s;
+  border: 5px dashed #bcbc84;
 }
 
 #zen-requirements {
@@ -190,7 +199,7 @@ p {
 }
 
 .main [role=article]:nth-child(odd) {
-  background-color: #9b1c1fE6;
+  background-color: #b55151E6;
   opacity: 100%;
 }
 
@@ -199,25 +208,20 @@ p {
     width: 75%;
   }
 
-  .main [role=article] {
+  .main [role=article], .preamble {
     width: 50%;
     align-self: flex-start;
     min-height: 40em;
     margin-bottom: 0;
   }
+
   .main [role=article]:nth-child(odd) {
     align-self: flex-end;
-  }
-
-  .preamble {
-    width: 50%;
-    min-height: 40em;
-    margin-bottom: 0;
   }
 }
 .sidebar {
   height: 100%;
-  background-color: #bcbc84;
+  background-color: #3e5079;
   padding: 1%;
 }
 
@@ -230,14 +234,14 @@ p {
     top: 0;
     right: 0;
     overflow-x: hidden;
-    border-left: 1rem dashed pink;
-    border-top: 1rem dashed pink;
+    border-left: 5px dashed #bcbc84;
+    border-top: 5px dashed #bcbc84;
   }
 }
 header, .summary {
   padding-left: 20px;
   padding-bottom: 10px;
-  background-color: #049468;
+  background-color: #b55151;
 }
 
 header h1 {
@@ -249,8 +253,12 @@ header h1 {
   padding-bottom: 20px;
 }
 
+header {
+  background-image: url(assets/quilt-sew.svg);
+}
+
 .requirements p:last-child {
-  background-color: #049468;
+  background-color: #b55151;
   margin: 10px -16px -16px -16px;
   padding: 15px;
 }
@@ -258,7 +266,7 @@ header h1 {
 footer {
   display: flex;
   justify-content: space-evenly;
-  background-color: #049468;
+  background-color: #b55151;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -274,7 +282,7 @@ footer a {
   transition: background-color 1s;
 }
 footer a:hover {
-  background-color: #036245;
+  background-color: #943f3f;
 }
 
 @media (min-width: 1024px) {

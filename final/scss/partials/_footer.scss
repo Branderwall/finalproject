@@ -6,7 +6,7 @@
  footer {
     display: flex;
     justify-content: space-evenly;
-    background-color: $color-4;
+    background-color: $color-1;
     width: 100%;   
     position: absolute;
     bottom: 0;
@@ -23,7 +23,7 @@
    }
 
    a:hover {
-      background-color: darken($color-4, 10%);
+      background-color: darken($color-1, 10%);
    }
  }
   
