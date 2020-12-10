@@ -210,6 +210,45 @@ p {
   background-size: 2000px;
 }
 
+.design-selection {
+  padding-left: 10px;
+}
+
+.design-selection li {
+  margin-bottom: 1.4em;
+}
+
+.design-selection li:nth-child(n) {
+  color: #ffc0cb;
+  font-family: "Roboto", sans-serif;
+}
+
+.design-name {
+  display: block;
+  margin-bottom: 0.25em;
+  font-family: "Bellota", cursive !important;
+  font-size: 1.2em;
+  color: #eeeed8;
+}
+
+.designer-name {
+  color: #ffc0cb;
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+
+.design-archives li, .zen-resources li {
+  background-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  height: 50px;
+}
+
+.design-archives li a, .zen-resources li a {
+  color: #eeeed8;
+  font-family: "Roboto", sans-serif;
+}
+
 @media (min-width: 1024px) {
   .sidebar {
     height: 100%;
