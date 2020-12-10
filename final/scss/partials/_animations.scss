@@ -1,8 +1,39 @@
-@keyframes sew {
+@keyframes sewing {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes flip {
     from {
-        stroke-dashoffset: 1000;
+        transform: rotate(0deg);
     }
     to {
-        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes clipright {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes clipleft {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-45deg);
     }
 }
