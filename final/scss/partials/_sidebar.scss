@@ -1,53 +1,56 @@
 .sidebar {
-    height: 100%;
-    background-color: $color-3;
-    padding: 1%;
-    background-image: url(assets/quilt-sew.svg);
-    background-size: 2000px;
+  height: 100%;
+  background-color: $color-3;
+  padding: 1%;
+  background-image: url(assets/quilt-sew.svg);
+  background-size: 2000px;
 }
 
 .design-selection {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .design-selection li {
-    margin-bottom: 1.4em;
+  margin-bottom: 1.4em;
 }
 
 .design-selection li:nth-child(n) {
-    color: $link-color;
-    font-family: $primary-font;
+  color: $link-color;
+  font-family: $primary-font;
 }
 
 .design-name {
-    display: block;
-    margin-bottom: 0.25em;
-    font-family: $secondary-font !important;
-    font-size: 1.2em;
-    color: $color-2;
+  display: block;
+  margin-bottom: 0.25em;
+  font-family: $secondary-font !important;
+  font-size: 1.2em;
+  color: $color-2;
 }
 
 .designer-name {
-    color: $link-color;
-    font-style: italic;
-    font-family: $primary-font;
+  color: $link-color;
+  font-style: italic;
+  font-family: $primary-font;
 }
 
-.design-archives li, .zen-resources li {
-    background-image: url("../final/images/needle&thread.png");
-    background-repeat: no-repeat;
-    padding-left: 40px;
-    height: 50px;
+.design-archives li,
+.zen-resources li {
+  display: flex;
+  align-items: center;
+  background-image: url(assets/needle&thread.png);
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  height: 35px;
 }
 
-.design-archives li a, .zen-resources li a {
-    color: $color-2;
-    font-family: $primary-font;
+.design-archives li a,
+.zen-resources li a {
+  color: $color-2;
+  font-family: $primary-font;
 }
-
 
 @media (min-width: $M) {
-.sidebar {
+  .sidebar {
     height: 100%;
     width: $sidebar-width;
     position: fixed;
@@ -57,6 +60,5 @@
     overflow-x: hidden;
     border-left: 5px dashed $thread-color;
     border-top: 5px dashed $thread-color;
-    }
-
+  }
 }
